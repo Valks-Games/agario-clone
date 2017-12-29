@@ -1,0 +1,14 @@
+div {
+	background-color: #333333;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, 0%);
+	position: fixed;
+	width: 30%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color: white;
+	text-align: center;
+	padding: 25px;
+	border-radius: 25px;
+	opacity: 0.8;
+}
