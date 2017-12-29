@@ -1,28 +1,3 @@
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-// Code for: https://youtu.be/ZjVyKXp9hec
-
-// Based off of Shawn Van Every's Live Web
-// http://itp.nyu.edu/~sve204/liveweb_fall2013/week3.html
-
-var blobs = [];
-var pellets = [];
-
-function Blob(id, x, y, r, name) {
-  this.id = id;
-  this.x = x;
-  this.y = y;
-  this.r = r;
-  this.name = name;
-}
-
-function Pellet(x, y, r){
-	this.x = x;
-	this.y = y;
-	this.r = r;
-}
-
 // Using express: http://expressjs.com/
 var express = require('express');
 // Create the app
@@ -45,6 +20,23 @@ app.use(express.static('public'));
 // WebSocket Portion
 // WebSockets work with the HTTP server
 var io = require('socket.io')(server);
+
+var blobs = [];
+var pellets = [];
+
+function Blob(id, x, y, r, name) {
+  this.id = id;
+  this.x = x;
+  this.y = y;
+  this.r = r;
+  this.name = name;
+}
+
+function Pellet(x, y, r){
+	this.x = x;
+	this.y = y;
+	this.r = r;
+}
 
 setInterval(heartbeat, 33);
 
